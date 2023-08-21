@@ -15,27 +15,27 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PostMapping
+    @RequestMapping(method = RequestMethod.POST)
     public ProductPOJO createProduct(@RequestBody ProductPOJO productPOJO){
         return productService.createProduct(productPOJO);
     }
 
-    @GetMapping
+    @RequestMapping(method = RequestMethod.GET)
     public List<ProductPOJO> getALlProducts(){
         return productService.getAllProducts();
     }
 
-    @GetMapping("/{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Optional<ProductPOJO> getProductByID(@PathVariable Long id){
         return productService.getProductByID(id);
     }
 
-    @PutMapping("/{id}")
+    @RequestMapping(value = "/{id}",method = RequestMethod.PUT)
     public ProductPOJO updateProduct(@PathVariable Long id, @RequestBody ProductPOJO productDetails){
         return productService.updateProduct(id, productDetails);
     }
 
-    @DeleteMapping("/{id}")
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public void deleteProduct(@PathVariable Long id){
         productService.deleteProduct(id);
     }
