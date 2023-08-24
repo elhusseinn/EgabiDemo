@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 import java.util.Optional;
 
-@Repository("jdbc")
+@Repository("productJdbc")
 public class JDBCProductRepo implements BaseRepoInterface<Product> {
 
     @Autowired

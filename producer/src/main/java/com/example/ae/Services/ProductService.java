@@ -2,6 +2,7 @@ package com.example.ae.Services;
 
 import com.example.ae.Mappers.ProductMapper;
 import com.example.ae.Models.Product;
+import com.example.ae.Models.User;
 import com.example.ae.POJO.ProductPOJO;
 import com.example.ae.Repositories.Base.BaseRepoInterface;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +18,8 @@ public class ProductService {
     @Autowired
     private ProductMapper productMapper;
     @Autowired
-    @Qualifier("jdbc")
+    @Qualifier("productJdbc")
     private BaseRepoInterface<Product> baseRepoInterface;
-
     // create new product
     public ProductPOJO createProduct(ProductPOJO productPOJO){
 

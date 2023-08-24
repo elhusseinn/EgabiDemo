@@ -8,12 +8,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service("jpa")
-public class JPAServices implements BaseRepoInterface<Product> {
+@Service("productJpa")
+public class JPAProductServices implements BaseRepoInterface<Product> {
 
     @Autowired
     private JPAProductRepo jpaProductRepo;
-
 
     @Override
     public Product save(Product object) {
