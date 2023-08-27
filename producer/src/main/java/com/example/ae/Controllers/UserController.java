@@ -19,6 +19,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST)
     public UserPOJO createUser(@RequestBody UserPOJO userPOJO){
+        System.out.println("TEST "+ userPOJO);
         return userService.createUser(userPOJO);
     }
     @RequestMapping(method = RequestMethod.GET)

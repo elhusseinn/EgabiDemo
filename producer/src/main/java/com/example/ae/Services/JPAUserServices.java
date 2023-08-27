@@ -25,6 +25,10 @@ public class JPAUserServices implements BaseRepoInterface<User> {
         return jpaUserRepo.save(object);
     }
 
+    public Optional<User> getUserByUserName(String name){
+        return jpaUserRepo.findByName(name);
+    }
+
     @Override
     public List<User> findAll() {
         return jpaUserRepo.findAll();

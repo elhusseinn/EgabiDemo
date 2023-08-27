@@ -17,6 +17,6 @@ public class UserPOJO {
     }
 
     private String name;
-    @JsonIgnore
+
     private String password;
 }
