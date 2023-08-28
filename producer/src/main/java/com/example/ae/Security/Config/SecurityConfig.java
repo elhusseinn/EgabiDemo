@@ -28,8 +28,9 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                .csrf().disable()
-               .authorizeRequests()
-               .antMatchers("/users/**").permitAll()
+               .authorizeRequests().antMatchers("auth/**").permitAll()
+
+//               .antMatchers("/users/**").permitAll()
                .anyRequest().authenticated()
                .and()
                .authenticationProvider(authenticationProvider())

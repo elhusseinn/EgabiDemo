@@ -18,7 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class producerApplication {
 
     @Autowired
-    JPAUserRepo userRepo; //TODO: inject the BaseRepoInterface<T> instead
+    JPAUserRepo userRepo;
 
     @Bean
     public PasswordEncoder encode(){
