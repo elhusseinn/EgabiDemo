@@ -1,10 +1,7 @@
 package com.example.ae;
 
-import com.example.ae.Models.User;
-import com.example.ae.Repositories.Base.BaseRepoInterface;
-import com.example.ae.Repositories.JPAUserRepo;
+import com.example.ae.repositories.JPAUserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
